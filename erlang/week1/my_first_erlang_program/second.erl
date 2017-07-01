@@ -1,11 +1,11 @@
 -module(second).
--export([hypotenuse/2,perimeter/2,area/2]).
+-export([hypotenuse/2, perimeter/2, area/2]).
 
-hypotenuse(A,B) ->
-    math:sqrt(first:square(A) + first:square(B)).
+hypotenuse(X, Y) ->
+    math:sqrt(first:square(X) + first:square(Y)).
 
-perimeter(A,B) ->
-    hypotenuse(A,B) + A + B.
+perimeter(X, Y) ->
+    X + Y + hypotenuse(X, Y).
 
-area(A,B) ->
-    first:mult(first:mult(0.5,A),B).
+area(X, Y) ->
+    0.5 * X * Y.
